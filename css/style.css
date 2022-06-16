@@ -138,6 +138,11 @@ body.template-dark {
     justify-content: center;
     gap: 3rem;
 }
+.nav-list.active {
+    display: block;
+    align-items: center;
+
+}
 
 .nav-link {
     display: inline-block;
@@ -171,10 +176,10 @@ body.template-dark {
     .nav-burger {
         display: none; 
     }
-    .nav-list {
-        display: flex;
+    .nav-burger:target {
+        display: block;
     }
-}
+    }
 
 /* HERO BANNER */
 
