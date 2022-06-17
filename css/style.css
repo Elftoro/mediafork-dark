@@ -140,7 +140,7 @@ body.template-dark {
         width:100%;
         height:100vh;
         left: 0;
-        background-color: black;
+        background-color: red;
     }
 
     .nav-item {
