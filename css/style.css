@@ -124,7 +124,31 @@ body.template-dark {
 }
 
 
-/* HEADER -> NAV */
+/* HEADER -> NAV ON MOBIL */
+
+@media screen and (max-width:768px) {
+
+    .nav-list.active{
+        display: flex;
+        position: absolute; 
+        flex-direction: column;
+        width:100%;
+        height:100vh;
+        left: 0;
+        background-color: black;
+    }
+
+    .nav-item {
+        padding: 1rem 2rem;
+        font-size: 3rem;
+        text-align: center;
+    }
+    }
+
+
+
+
+/* HEADER -> NAV ON DESKTOP*/
 
 .nav-burger {
     font-size: 3rem;
@@ -132,23 +156,11 @@ body.template-dark {
     cursor: pointer;
 }
 
-.nav-list{
-    display: flex;
-    position: absolute;
+.nav-list {
+    display: none;
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    left: 0;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    padding: 70px;
-    background-color: rgba(0, 0, 0, .5);
-}
-.nav-list.active {
-    display: block;
-    align-items: center;
-
 }
 
 .nav-link {
@@ -157,10 +169,6 @@ body.template-dark {
     color: #fff;
     font-size: 1.5rem;
     transition: border var(--transition-duration) var(--transition-function);
-}
-
-.nav-item {
-    padding: 25px;
 }
 
 .nav-link::after {
@@ -187,11 +195,10 @@ body.template-dark {
     .nav-burger {
         display: none; 
     }
-    .nav-burger:target {
-        display: block;
+    .nav-list {
+        display: flex;
     }
-
-    }
+}
 
 /* HERO BANNER */
 
