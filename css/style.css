@@ -141,6 +141,8 @@ body.template-dark {
 @media screen and (max-width: 767px) {
     .nav-list {
         position: absolute;
+        top: 0;
+        left: 0;
     }
 
 }
