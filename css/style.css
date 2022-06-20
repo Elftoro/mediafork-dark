@@ -141,6 +141,10 @@ body.overflow{
     overflow-y: hidden;
 }
 
+.modal-txt {
+    display: none;
+}
+
 /* HEADER -> NAV ON MOBILE*/
 
 @media screen and (max-width: 767px) {
