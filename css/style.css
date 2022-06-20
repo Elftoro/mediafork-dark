@@ -137,13 +137,14 @@ body.template-dark {
     color: #fff;
 }
 
+body.overflow{
+    overflow-y: hidden;
+}
+
 /* HEADER -> NAV ON MOBILE*/
 
 @media screen and (max-width: 767px) {
 
-    body.overflow{
-        overflow-y: hidden;
-    }
 
     .nav-list {
         position: absolute;
@@ -176,10 +177,6 @@ body.template-dark {
 /* HEADER -> NAV ON DESKTOP*/
 
 @media screen and (min-width: 768px) {
-
-    body.overflow{
-        overflow-y: hidden;
-    }
 
     .nav-list {
         display: flex;
@@ -347,6 +344,7 @@ body.template-dark {
 
 /* SERVICES */
 
+
 .cards-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -368,6 +366,7 @@ body.template-dark {
     aspect-ratio: 2 / 3;
     position: relative;
     transition: background var(--transition-duration) var(--transition-function);
+    cursor: pointer;
 }
 
 .card-ttl {
