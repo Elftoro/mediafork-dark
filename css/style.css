@@ -140,6 +140,11 @@ body.template-dark {
 /* HEADER -> NAV ON MOBILE*/
 
 @media screen and (max-width: 767px) {
+
+    body.overflow{
+        overflow-y: hidden;
+    }
+
     .nav-list {
         position: absolute;
         top: -100vh;
@@ -171,6 +176,11 @@ body.template-dark {
 /* HEADER -> NAV ON DESKTOP*/
 
 @media screen and (min-width: 768px) {
+
+    body.overflow{
+        overflow-y: hidden;
+    }
+
     .nav-list {
         display: flex;
         align-items: center;
