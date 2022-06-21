@@ -1,3 +1,5 @@
+// Mobile menu 
+
 const mobileButton = document.getElementById("mobile-button");
 const mainNav = document.getElementById("main-nav");
 const mobileIcon = document.getElementById("mobile-icon");
@@ -32,3 +34,38 @@ mainNav.addEventListener("click", function(event) {
 window.addEventListener("resize", function(event) {
     if (window.innerWidth >= 768) resetNav();
 })
+
+// Modal services
+const cardsList = document.querySelectorAll("#cards-list a.card");
+cardsList.forEach(function(card) {
+    card.addEventListener("click", function(event) {
+        event.preventDefault();
+        const modal = createModal();
+        const classList = {
+            H3: "modal-ttl",
+            P: "modal-txt",
+            IMG: "modal-icon"
+        };
+        modal.firstElementChild.innerHTML = '<i class="fa fa-times modal-close" aria-hidden="true"></i>';
+        Object.values(this.children).forEach(function(element) {
+            const newElement = element.cloneNode(true);
+            newElement.className = classList[element.tagName];
+            modal.firstElementChild.appendChild(newElement);
+        });
+    })
+})
+
+function createModal() {
+    const modal = document.createElement("div");
+    modal.className = "modal";
+    modal.id = "modal";
+    const modalContent = document.createElement("div");
+    modalContent.className = "modal-content";
+    modal.appendChild(modalContent);
+    
+    document.getElementById("services").insertBefore(modal, document.getElementById("cards-list"));
+    modal.addEventListener("click", function() {
+        this.remove();
+    })
+    return modal;
+}
